@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rafael O. Macabocsit</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(to right, #f4f4f4, #e8f5e9);
+      color: #333;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    /* Sticky Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      background: #2e8b57;
+      padding: 15px;
+      text-align: center;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #c8e6c9;
+    }
+
+    header {
+      background: #2e8b57;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      letter-spacing: 2px;
+      font-size: 1.8rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .intro {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px;
+      background-color: #fff;
+      border-radius: 12px;
+      margin: 20px auto;
+      max-width: 1000px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .intro .text h2 {
+      font-size: 2rem;
+      color: #2e8b57;
+      margin-bottom: 10px;
+    }
+
+    .intro .text p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    .intro .photo img {
+      width: 180px;
+      border-radius: 50%;
+      border: 4px solid #ffffff;
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
+      animation-delay: 0.5s;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    section h2 {
+      color: #2e8b57;
+      margin-bottom: 15px;
+      font-size: 1.6rem;
+      border-bottom: 2px solid #2e8b57;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .contact ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .contact li {
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .gallery {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .work {
+      width: 300px;
+      background-color: #f9f9f9;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .work img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .work:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    }
+
+    button {
+      padding: 12px 25px;
+      border: none;
+      border-radius: 25px;
+      background-color: #2e8b57;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #1b5e20;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      background: #2e8b57;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+
+    /* Fade-in animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .intro {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .intro .photo {
+        margin-top: 20px;
+      }
+
+      .gallery {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .work {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#contact">Contact</a>
+    <a href="#works">Works</a>
+  </nav>
+
+  <header>
+    <h1>MY PORTFOLIO</h1>
+  </header>
+
+  <section class="intro">
+    <div class="text">
+      <h2>HELLO! I'M <span id="name">RAFAEL</span></h2>
+      <p>A Front End Designer.</p>
+    </div>
+    <div class="photo">
+      <img src="C:\Users\Macabocsit\Downloads\Profile.png" alt="Profile" />
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>ABOUT ME</h2>
+    <p>
+      I am a 3rd Year College IT Student with a strong interest in Front End Development. 
+      I focus on creating simple, user-friendly, and responsive websites. 
+      I have basic to intermediate skills in HTML, CSS, and JavaScript, and I am familiar with front-end frameworks and design tools. 
+      I enjoy turning ideas and designs into working web pages and continuously improving my skills through practice and school projects. 
+      I am eager to learn new technologies and gain real-world experience in web development.
+    </p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>CONTACT DETAILS</h2>
+    <ul>
+      <li>Email: <span id="email">rafaelobis516@gmail.com</span></li>
+      <li>Phone: <span id="phone">+63 9651647176</span></li>
+      <li>Location: <span id="location">Talacsan, San Rafael, Bulacan</span></li>
+    </ul>
+  </section>
+
+  <section id="works" class="works">
+    <h2>SAMPLE WORKS</h2>
+    <div class="gallery">
+      <div class="work">
+        <img src="C:\Users\Macabocsit\Downloads\responsive.png" alt="Responsive Landing Page" />
+        <p>Responsive Landing Page</p>
+      </div>
+      <div class="work">
+        <img src="C:\Users\Macabocsit\Downloads\port.jpg" alt="Portfolio Website" />
+        <p>Portfolio Website</p>
+      </div>
+      <div class="work">
+        <img src="C:\Users\Macabocsit\Downloads\java.webp" alt="JavaScript Calculator" />
+        <p>JavaScript Calculator</p>
+      </div>
+    </div>
+    <div style="text-align:center;">
+      <button>View More Projects</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Rafael O. Macabocsit | BSIT 3B</p>
+  </footer>
+</body>
+</html>
